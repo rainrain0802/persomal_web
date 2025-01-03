@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+</head>
+<link rel="stylesheet" href="http:////at.alicdn.com/t/c/font_4794919_6jdi0bcdic.css ">
+<style>
+    *{
+            /* margin: 0;外边框 */
+            margin: 0; 
+            /* padding: 0;内边框 */
+            padding: 0;
+            box-sizing: border-box;
+            color: #333333;
+        }
+    
+    .container{
+        display: column;
+    }
+    .top{
+        width: 100%;
+        height: 60px;
+        display: block;
+        background-color: rgb(180, 251, 227);
+        
+        .top-left{
+            display: flex;
+            width: 50%;
+            img{
+                display: flex;
+                width: 40px;
+                margin-left: 20px;
+                margin-top: 10px;
+            }
+        }
+
+        .top-right{
+           display: flex;
+           width: 50%;
+           justify-content: center;
+           align-items: center;
+           height: 100%;
+           margin-top: -40px;
+           margin-left: 1000px;
+           li{
+            display: inline-block;
+           }
+           a{
+            color: #337AB7;
+            text-decoration: none;
+            font-size: 20px;
+            margin-left: 12px;
+           }
+           i{
+            font-size: 25px;
+           }
+        }
+    }
+    
+    .middle{
+        display: grid;
+        width: 100%;
+        height: 800px;
+        background-color: #ff9a9e;
+        animation: colorChange 5s infinite alternate;
+
+        h1{
+            font-size: 48px;
+            font-weight: bold;
+            background: linear-gradient(to right, #ff5fdf,rgb(131, 65, 230), #3c07eb);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-align: center;
+            justify-items: center;
+            margin-top: 100px;
+        }
+
+        p{
+            font-size: 30px;
+            font-weight: 400px;
+            text-align: center;
+            justify-items: center;
+            margin-top: -40px;
+        }
+
+        button {
+        width: 150px; 
+        height: 50px; 
+        border-radius: 25px; /* 设置圆角 */
+        background: linear-gradient(to right, #ff5fdf,rgb(131, 65, 230), #3c07eb);
+        transform: translate(780px,-50px);
+        a{
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+        }
+}
+
+.button:hover {
+    background-color: #45a049; /* 鼠标悬停时改变背景颜色 */
+}
+        
+    }
+    @keyframes colorChange {
+        0% {
+        background-color: #ff9a9e;
+        }
+        25% {
+        background-color: #a1c2fc;
+        }
+        50% {
+        background-color: #f5bbab;
+        }
+    75% {
+        background-color: #82d09e;
+        }
+    100% {
+        background-color: #c7b5f7;
+        }
+    }
+
+    .footer{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        background-color: rgb(187, 245, 226);
+        
+        .footer-left{
+            display: block;
+            width: 50%;
+            img{
+                display: flex;
+                width: 60px;
+                transform: translate(40px,20px);
+            }
+        }
+
+        .footer-middle{
+           display: block;
+           width: 50%;
+           justify-content: center;
+           align-items: center;
+           height: 100%;
+           transform: translate(-120px,40px);
+           li{
+            display: inline-block;
+           }
+           a{
+            text-decoration: none;
+            font-size: 20px;
+           }
+           i{
+            font-size: 25px;
+           }
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="top-left">
+                <img src="./tt.jpg" alt="">
+            </div>
+            <div class="top-right">
+                <ul>
+                <li><i class="iconfont icon-gerenshouye-"></i><a href="#">首页</a></li>   
+                <li><i class="iconfont icon-zhanghao"></i><a href="#">关于我</a></li>
+                <li><i class="iconfont icon-wendang"></i><a href="#">我的作品</a></li>
+                <li><i class="iconfont icon-fasong"></i><a href="#">联系我</a></li>   
+                </ul>  
+            </div>
+        </div>
+    
+        <div class="middle">
+            <h1>你好呀，这是一名脆皮大学生</h1>
+            <p>大一计算机类</p>
+            <button><a href="#">联系我</a></button>
+        </div>
+    
+        <div class="footer">
+            <div class="footer-left">
+                <img src="./tt.jpg" alt="">
+            </div>
+            <div class="footer-middle">
+               <ul>
+                <li><i class="iconfont icon-douyin"></i><a href="#">我的抖音</a></li>
+                <li><i class="iconfont icon-meishi"></i><a href="#">美食日记</a></li>
+                <li><i class="iconfont icon-vlog"></i><a href="#">vlog</a></li>
+               </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

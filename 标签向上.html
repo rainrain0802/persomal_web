@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>输入框标签效果</title>
+    <style>
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            outline: none;
+            background: transparent;
+        }
+
+        label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            font-size: 16px;
+            color: #999;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        input:focus ~ label,
+        input:not(:placeholder-shown) ~ label {
+            top: -10px; /* 标签向上移动 */
+            font-size: 12px; /* 字体变小 */
+            color: #007bff; /* 颜色变为蓝色 */
+        }
+    </style>
+</head>
+<body>
+    <div class="input-group">
+        <input type="text" id="username" placeholder=" " required>
+        <label for="username">用户名</label>
+    </div>
+    <div class="input-group">
+        <input type="email" id="email" placeholder=" " required>
+        <label for="email">邮箱</label>
+    </div>
+    <div class="input-group">
+        <input type="password" id="password" placeholder=" " required>
+        <label for="password">密码</label>
+    </div>
+</body>
+</html>

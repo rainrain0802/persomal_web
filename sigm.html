@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+       background-color: #8df399;
+    }
+    h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 24px;
+}
+    .container{
+        width: 100%;
+        padding: 20px;
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 35%;
+    }
+
+    .login-box {
+    background: white;
+    padding: 50px;
+    width: 400px;
+   }
+
+   .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            outline: none;
+            background: transparent;
+        }
+
+        label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            font-size: 16px;
+            color: #999;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        input:focus ~ label,
+        input:not(:placeholder-shown) ~ label {
+            top: -10px; /* 标签向上移动 */
+            font-size: 12px; /* 字体变小 */
+            color: #007bff; /* 颜色变为蓝色 */
+        }
+    
+
+    .links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+
+    button{
+        width: 100%;
+        padding: 12px;
+        background: #3b82f6;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background: #2563eb;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="login-box">
+          <h2>注册</h2>
+          <form>
+            <div class="input-group">
+                <input type="text" id="username" placeholder=" " required>
+                <label for="username">用户名</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder=" " required>
+                <label for="password">邮箱</label>
+            </div>
+           
+            <div class="input-group">
+                <input type="text" id="username" placeholder=" " required>
+                <label for="username">密码</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder=" " required>
+                <label for="password">确认密码</label>
+            </div>
+            <button type="submit">注册</button>
+            <div class="links">
+              <a href="login.html">返回登录</a>
+            </div>
+          </form>
+        </div>
+      </div>
+</body>
+</html>
